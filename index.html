@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CVPlayer</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="info-frame">
+            <p>
+                CVPlayer<br><button id="openBtn">打开本地文件</button>
+                <input type="file" accept="video/3gpp, video/mp4, video/mpeg" hidden>
+            </p>
+        </div>
+        <div class="video-frame">
+            <div class="video-part">
+                <div id="holder">
+                    <div class="fullscreen-part">
+                        <button id="closeBtn" title="点击关闭当前视频"><img src="./assets/images/close.png" alt=""></button>
+                        <!--<button id="fullscreenBtn" title="点击全屏播放"><img src="./assets/images/fullscreen.png" alt=""></button>-->
+                    </div>
+                    <video src="" id="video" controls></video>
+
+                    <div class="prompt">
+                        <!--<h3>请将视频拖到这里</h3>-->
+                        <h3>调用摄像头请先在右侧进行相关设置</h3>
+                        <p>直接关闭窗口即可关闭摄像头</p>
+                    </div>
+                </div>
+            </div>
+            <div class="setting-part">
+                <h2>设置</h2>
+                <p>摄像头启动时间</p>
+                <div>
+                    <label for="hour">时：</label>
+                    <input type="number" id="hour" value="0" min="0" max="24" disabled>
+                </div>
+                <div>
+                    <label for="minute">分：</label>
+                    <input type="number" id="minute" value="0" min="0" max="59" disabled>
+                </div>
+                <div>
+                    <label for="second">秒：</label>
+                    <input type="number" id="second" value="0" min="0" max="59" disabled>
+                </div>
+                <p>摄像头持续时间（秒/s）</p>
+                <input type="number" id="interval" value="0" min="0" disabled>
+
+                <div class="save-part">
+                    <button id="saveBtn">设置</button>
+                </div>
+                <div class="about">
+                    About<br> Powered by Abraham
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--为了能够让jquery在electron运行，将其进行如下修改
+    头部的
+    ! function(a, b) {
+        "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function(a) {
+        if (!a.document) throw new Error("jQuery requires a window with a document");
+        return b(a)
+        } : b(a)
+    }
+    替换为
+    !function(a,b){b(a)}
+    -->
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/html5media.min.js"></script>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

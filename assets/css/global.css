@@ -1,0 +1,200 @@
+/* Global ---------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    /* Prevents rubber-band scrolling of the whole "page" */
+    color: #ccc;
+    background-color: #fff;
+    /* To cover OSes with no default background color */
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #414339;
+}
+
+.info-frame {
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0;
+    background: #272822;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 1px #000;
+}
+
+.info-frame p {
+    line-height: 35px;
+}
+
+.info-frame button {
+    outline: none;
+    height: 30px;
+    width: 150px;
+    line-height: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #3385FF;
+}
+
+.info-frame button:hover {
+    background-color: #2d78f4;
+}
+
+.video-frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    background: #272822;
+}
+
+.video-part {
+    width: 70%;
+    height: 100%;
+    /*background: pink;*/
+}
+
+.setting-part {
+    width: 30%;
+    /*height: 85%;*/
+    text-align: center;
+    padding: 10px 0;
+    color: #ccc;
+    border-left: 1px solid #000;
+    box-shadow: -1px 0 1px #000;
+}
+
+.setting-part h2 {
+    margin-top: 30px;
+    font-weight: lighter;
+}
+
+.setting-part p {
+    margin: 30px 0 20px;
+    color: #ccc;
+}
+
+.setting-part input {
+    height: 24px;
+    width: 50px;
+    margin: 5px;
+    text-align: center;
+    cursor: not-allowed;
+    font-size: 18px;
+    background: #aaa;
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+.setting-part .editable {
+    background-color: #414339;
+    color: #B6BFC7;
+    cursor: auto;
+}
+
+.save-part {
+    margin: 10px 0;
+    padding: 10px 0 30px;
+}
+
+.save-part button {
+    outline: none;
+    height: 30px;
+    width: 100px;
+    line-height: 25px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: #3385FF;
+}
+
+.save-part .save {
+    background-color: #5bb75b;
+}
+
+.save-part .save:hover {
+    background-color: #51a351;
+}
+
+.save-part button:hover {
+    background-color: #2d78f4;
+}
+
+.about {
+    border-top: 1px dotted #aaa;
+    font-size: 12px;
+    padding: 10px 0;
+    color: #aaa;
+}
+
+#holder {
+    width: 100%;
+    height: 100%;
+    margin-top: -45px;
+    color: #ccc;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#holder video {
+    width: 100%;
+    vertical-align: middle;
+    display: none;
+}
+
+.fullscreen-part {
+    position: absolute;
+    z-index: 99;
+    display: none;
+    height: 40px;
+    width: 70%;
+    top: 90px;
+    text-align: right;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.fullscreen-part button {
+    margin: 8px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.fullscreen-part img {
+    width: 25px;
+}
+
+#holder .prompt {}
+
+.prompt p {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #aaa;
+}
