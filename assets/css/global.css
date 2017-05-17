@@ -115,8 +115,8 @@ body {
 }
 
 .save-part {
-    margin: 10px 0;
-    padding: 10px 0 30px;
+    margin: 30px 0;
+    padding: 30px 0 60px;
 }
 
 .save-part button {
@@ -146,7 +146,7 @@ body {
 .about {
     border-top: 1px dotted #aaa;
     font-size: 12px;
-    padding: 10px 0;
+    padding: 20px 0;
     color: #aaa;
 }
 
